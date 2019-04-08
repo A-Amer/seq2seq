@@ -32,16 +32,6 @@ model_params:
   target.max_seq_len: 60
 vocab_source: /gdrive/My Drive/Colab Notebooks/data/train/OpenNMT/src-vocab.txt
 vocab_target: /gdrive/My Drive/Colab Notebooks/data/train/OpenNMT/tgt-vocab.txt
-input_pipeline_train:
-class: ParallelTextInputPipeline
-params:
-source_files: -'/gdrive/My Drive/Colab Notebooks/data/train/train.src.txt '
-target_files: -'/gdrive/My Drive/Colab Notebooks/data/train/train.dst.txt'
-input_pipeline_dev:
-class: ParallelTextInputPipeline
-params:
-source_files: -'/gdrive/My Drive/Colab Notebooks/data-simplification/wikismall/PWKP_108016.tag.80.aner.valid.src '
-target_files: -'/gdrive/My Drive/Colab Notebooks/data-simplification/wikismall/PWKP_108016.tag.80.aner.valid.tgt'
 batch_size: 32
 train_steps: 38910
 output_dir: /gdrive/My Drive/Colab Notebooks/data/biDirectionalOpenNMT/
